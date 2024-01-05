@@ -1,0 +1,52 @@
+/* ContentPage.css */
+.content-page {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 150vh;
+    height: 50vh;
+  }
+
+  .module-container{
+    margin-top: 40px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .content-page h2 {
+    color: #333; /* Dark text color */
+  }
+  
+  .content-page p {
+    color: #555; /* Slightly lighter text color */
+  }
+  
+  .content-page strong {
+    color: #335fb7; /* Blue color for strong elements */
+  }
+  .module {
+    margin-right: 20px; /* Adjust the spacing between modules */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1; /* Allow modules to grow and take equal space */
+    max-width: 300px; /* Set a maximum width for each module */
+    background-color: #a3bcee;
+    max-height: 200px;
+  }
+  
+  .module h3 {
+    color: #333;
+  }
+  
+  .module p {
+    color: #555;
+  }
+  
+  .module a {
+    color: #007bff;
+    text-decoration: none;
+  }
