@@ -1,5 +1,7 @@
 import React from "react";
 import "./ContentPage.css"; // Import the CSS file
+import { Link } from "react-router-dom";
+import ModulePage from "./Module"; // Assume you have a ModulePage component for individual modules
 
 const ContentPage = ({ inputValue, selectedOption }) => {
   const getModuleCount = () => {
@@ -27,11 +29,10 @@ const ContentPage = ({ inputValue, selectedOption }) => {
 
     // Generate an array of modules based on the count
     const modules = Array.from({ length: moduleCount }, (_, index) => (
-      <div className="module" key={index}>
+      <Link to={`/module${index + 1}`} key={index} className="module">
         <h3>Module {index + 1}</h3>
         <p>Description of Module {index + 1}</p>
-        {/* Add Link or any other content as needed */}
-      </div>
+      </Link>
     ));
 
     return modules;
