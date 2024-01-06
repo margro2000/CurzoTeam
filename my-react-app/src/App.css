@@ -6,13 +6,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto; 
 }
 
 .app-container {
   text-align: center;
   padding: 20px;
-  background-color: #0041c2;
+  background-color: #335fb7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
