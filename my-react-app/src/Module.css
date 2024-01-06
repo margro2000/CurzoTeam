@@ -34,8 +34,7 @@
   
   .video-container {
     display: flex;
-
-    max-height: 300px; /* Set a maximum height for the video container */
+    max-height: 400px; /* Set a maximum height for the video container */
     overflow-y: auto; /* Enable vertical scrolling if videos exceed the container height */
     width: 100vw; /* Full width of the viewport */
     flex-direction: column;
