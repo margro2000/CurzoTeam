@@ -1,6 +1,7 @@
 import React from "react";
 import "./ContentPage.css"; // Import the CSS file
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const ContentPage = ({ inputValue, selectedOption }) => {
   const getModuleCount = () => {
@@ -38,16 +39,19 @@ const ContentPage = ({ inputValue, selectedOption }) => {
   };
 
   return (
-    <div className="content-page">
-      <h2>Your Learning Plan</h2>
-      <p>
-        You want to learn: <strong>{inputValue}</strong>
-      </p>
-      <p>
-        Your selected learning duration: <strong>{selectedOption}</strong>
-      </p>
-      <div className="module-container">{renderModules()}</div>
-    </div>
+    // <div>
+    //   <Navbar></Navbar>
+      <div className="content-page">
+        <h2>Your Learning Plan</h2>
+        <p>
+          You want to learn: <strong>{inputValue}</strong>
+        </p>
+        <p>
+          Your selected learning duration: <strong>{selectedOption}</strong>
+        </p>
+        <div className="module-container">{renderModules()}</div>
+      </div>
+    // </div>
   );
 };
 

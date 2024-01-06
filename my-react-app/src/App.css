@@ -1,65 +1,71 @@
+/* App.css */
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column; /* Change to column direction */
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh; /* Change to min-height */
   background-color: #f0f0f0;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  overflow-y: auto; 
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .app-container {
+  margin-top: 80px; /* Adjust the margin-top as needed */
   text-align: center;
-  padding: 20px;
+  padding: 40px;
   background-color: #335fb7;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
 }
-
 h1 {
   color: white;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #eee;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .input-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
-input {
-  padding: 10px;
-  width: 200px;
+input,
+select {
+  padding: 12px;
+  width: 300px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 select {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-
-.option{
-  color: black;
+  margin-top: 10px;
 }
 
 .submit-button {
-  padding: 10px;
-  margin-left: 5px;
-  background-color: #007bff;
+  padding: 12px;
+  background-color: #1e81eb;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
   background-color: #0056b3;
 }
+

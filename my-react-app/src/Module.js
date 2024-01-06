@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import "./Module.css"; // Import the updated CSS file
 import YouTube from "react-youtube";
+import Navbar from "./Navbar";
 
 const ModulePage = ({ match }) => {
   const { moduleId } = useParams();
@@ -19,26 +20,22 @@ const ModulePage = ({ match }) => {
   };
 
   return (
-    <div className="module-container-two">
-      <h2 className="h2-two">Module {moduleId}: Title</h2>
-      <div className="summary">
-        Summary / Goals of the module go here 
-      </div>
-      <div className="module-links">
-        <h3>YouTube Videos:</h3>
-        <div className="video-container">
-          {videoIds.map((videoId) => (
-            <YouTube key={videoId} videoId={videoId} opts={opts} />
-          ))}
+    <div>
+      <Navbar></Navbar>
+      <div className="module-container-two">
+        <h2 className="h2-two">Module {moduleId}: Title</h2>
+        <div className="summary">Summary / Goals of the module go here</div>
+        <div className="module-links">
+          <h3>YouTube Videos:</h3>
+          <div className="video-container">
+            {videoIds.map((videoId) => (
+              <YouTube key={videoId} videoId={videoId} opts={opts} />
+            ))}
+          </div>
+          <h3>Supplementary Text</h3>
+          <p>Testing</p>
+          <h3>Other Resources</h3>
         </div>
-        <h3>
-          Supplementary Text
-        </h3>
-        <p>Testing</p>
-        <h3>
-          Other Resources
-        </h3>
-        
       </div>
     </div>
   );
