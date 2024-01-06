@@ -1,7 +1,6 @@
 import React from "react";
 import "./ContentPage.css"; // Import the CSS file
 import { Link } from "react-router-dom";
-import ModulePage from "./Module"; // Assume you have a ModulePage component for individual modules
 
 const ContentPage = ({ inputValue, selectedOption }) => {
   const getModuleCount = () => {
