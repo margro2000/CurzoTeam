@@ -20,7 +20,7 @@ const ModulePage = ({ match }) => {
 
   return (
     <div className="module-container-two">
-      <h2 className="h2-two">Module {moduleId}</h2>
+      <h2 className="h2-two">Module {moduleId}: Title</h2>
       <div className="summary">
         Summary / Goals of the module go here 
       </div>
@@ -34,12 +34,7 @@ const ModulePage = ({ match }) => {
         <h3>
           Supplementary Text
         </h3>
-        <h3>
-          Other Resources
-        </h3>
-        <h3>
-          Other Resources
-        </h3>
+        <p>Testing</p>
         <h3>
           Other Resources
         </h3>

@@ -3,32 +3,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center items horizontally */
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  h3, p{
+    text-align: center;
   }
   
-.h2-two {
+  .h2-two {
     background-color: #335fb7;
     color: white;
     padding: 10px;
     margin: 0;
     width: 150px;
     text-align: center; /* Center the text horizontally */
-    border-radius:10px;
+    border-radius: 10px;
   }
   
   .module-links {
     margin-top: 20px;
+    width: 100vw; /* Full width of the viewport */
+    margin: auto; /* Center the container horizontally */
   }
-  .summary{
-    margin-top: 20px; 
-  }
-
-  .module-links {
+  
+  .summary {
     margin-top: 20px;
   }
   
   .video-container {
-    max-height: 500px; /* Set a maximum height for the video container */
+    display: flex;
+
+    max-height: 300px; /* Set a maximum height for the video container */
     overflow-y: auto; /* Enable vertical scrolling if videos exceed the container height */
+    width: 100vw; /* Full width of the viewport */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
   /* Add any additional styling as needed */
   
