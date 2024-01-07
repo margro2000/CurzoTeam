@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import ContentPage from "./ContentPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -9,6 +9,8 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [showContentPage, setShowContentPage] = useState(false);
+
+  const [data, setData] = useState([]);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);

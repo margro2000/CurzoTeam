@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ContentPage.css"; // Import the CSS file
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
@@ -37,6 +37,20 @@ const ContentPage = ({ inputValue, selectedOption }) => {
 
     return modules;
   };
+
+  
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("/members").then(
+      (response) =>
+        response.json().then((json) => {
+          setData(json);
+          console.log(json);
+        })
+    );    
+  });
+
 
   return (
     // <div>

@@ -1,6 +1,6 @@
 // App.js
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import ContentPage from "./ContentPage";
 import { BrowserRouter, Routes } from "react-router-dom";
@@ -19,11 +19,18 @@ function App() {
     setSelectedOption(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     console.log("Input Value:", inputValue);
     console.log("Selected Option:", selectedOption);
+    const res = await fetch(`http://localhost:5000/chat?input=${inputValue}`)
+      .then(response => response.text())
+      .then(data => setInputValue(data))
+      .catch(error => console.log(error));
+      console.log(inputValue, res);
     setShowContentPage(true);
   };
+
+ 
 
   return (
     <div>
@@ -40,6 +47,11 @@ function App() {
             value={inputValue}
             onChange={handleInputChange}
           />
+          {/* <div>
+          {data && data.members && data.members.map((member, i) => (
+          <p key={i}>{member}</p>
+          ))}
+          </div> */}
           <select onChange={handleOptionChange}>
             <option value="">Select a duration</option>
             <option value="1 week">1 week</option>
