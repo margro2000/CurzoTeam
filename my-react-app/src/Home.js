@@ -23,15 +23,18 @@ function App() {
     console.log("Input Value:", inputValue);
     console.log("Selected Option:", selectedOption);
     const res = await fetch(`http://localhost:5000/chat?input=${inputValue}`)
-      .then(response => response.text())
-      .then(data => setInputValue(data))
-      .catch(error => console.log(error));
       console.log(inputValue, res);
     setShowContentPage(true);
+    const data = await res.text();
+    try {
+      const jsonData = JSON.parse(data); // convert the string to a JavaScript object
+      // Now you can use jsonData as a normal JavaScript object
+      console.log(jsonData);
+    } catch (error) {
+      console.error('Failed to parse JSON:', error);
+    }
+      // Assuming you have a fetch or axios call here that gets the JSON string
   };
-
- 
-
   return (
     <div>
       <Navbar></Navbar>
