@@ -1,29 +1,25 @@
 // Navbar.js
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css'; // Import your Navbar styles
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
   return (
     <nav className="navbar">
       <ul>
-        <li>
-          {/* Replace "Home" text with the image */}
-          <Link to="/">
-            <img src="path/to/home-icon.png" alt="Home" />
+        <li className="nav-item">
+          <Link to="/">Home</Link>
+        </li>
+        {/* Add more links as needed */}
+        <li className="navbar-right">
+          <Link to="/login" className="login-link">
+            Login
           </Link>
         </li>
-        {/* Add other navigation links as needed */}
-        {/* <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li> */}
       </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;

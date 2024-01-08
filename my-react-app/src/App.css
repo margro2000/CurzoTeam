@@ -9,10 +9,18 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh; /* Change to min-height */
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #f0f0f0, #69a4b6); /* Adjust colors as needed */
   overflow-x: hidden;
   overflow-y: auto;
+  font-family: 'font', sans-serif;
 }
+@font-face {
+  font-family: 'font';
+  src: url('/Users/mgroisman/Desktop/Curzo/my-react-app/src/font-regular.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 .app-container {
   margin-top: 80px; /* Adjust the margin-top as needed */
@@ -44,7 +52,7 @@ h1 {
 input,
 select {
   padding: 12px;
-  width: 300px;
+  width: 350px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
@@ -63,9 +71,14 @@ select {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  font-family: 'font', sans-serif;
+
 }
 
 .submit-button:hover {
   background-color: #0056b3;
 }
 
+button, :placeholder-shown, select{
+  font-family: 'font', sans-serif;
+}
